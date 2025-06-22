@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сhocolate</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" >
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="desert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script
+        type="module"
+        crossorigin
+        src="https://spring-slider.uiinitiative.com/assets/index.8742a0a0.js">
+    </script>
+    <link
+        rel="modulepreload"
+        href="https://spring-slider.uiinitiative.com/assets/vendor.0e76e1a6.js">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Кондитерська крамниця</a>
+         <a class="logo-img" href="index.html"><img src="img/logo.png" alt="logo" style="max-width: 100%; height: auto;" ></a>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="index.html" ><i class="fas fa-shop "></i></a></li>
+            <li><a class="nav-link" href=""id="openModal"><i class="fa-regular fa-envelope"></i></a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Зв'яжіться з нами</h2>
+            <form id="contactForm" action="https://formspree.io/f/xqabpzgo" method="POST">
+            <input type="text" id="fullName" name="fullName" placeholder="Повне ім'я" required>
+            <span class="error-message" id="nameError"></span>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+            <span class="error-message" id="emailError"></span>
+            <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+            <span class="error-message" id="phoneError"></span>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+            <span class="error-message" id="messageError"></span>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Надіслати повідомлення</button>
+            </form>
+             <p id="successMessage" class="hidden"><i class="fas fa-check-circle"></i> Ваше повідомлення надіслано успішно!</p>
+
+       
+    </div>
+</div>
+
+<section class="categories">
+    <div class="category-container">
+        <div class="category-item">
+            <p>ТОРТИ</p>
+        </div>
+        <div class="category-item">
+            <p>ТІСТЕЧКА</p>
+        </div>
+        <div class="category-item">
+            <p>МОРОЗИВО</p>
+        </div>
+        <div class="category-item">
+            <p>ЦУКЕРКИ</p>
+        </div>
+        <div class="category-item">
+            <p>ПЕЧИВО</p>
+        </div>
+        <div class="category-item">
+            <p>НАПОЇ</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="tovar-list">
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/drink4.jpg" data-price=" від 130 ">
+        <img src="img/drink4.jpg" alt="Напої" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Соки (фреш)</h2>
+            <span class="tovar-size">Об'єм - 250 г.</span>
+            <div class="details">
+                <p><strong>Свіжовичавлені соки — це натуральна енергія фруктів та овочів у кожній краплі. Вони дарують свіжий, насичений смак, наповнюють організм 
+                    вітамінами, антиоксидантами та життєвою силою. Кожен ковток — це: справжня насолода натуральним смаком, бадьорість і легкість без доданого цукру, 
+                    щоденна турбота про здоров’я.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/drink5.jpg" data-price=" від 115">
+        <img src="img/drink5.jpg" alt="Напої" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Лимонад (в асортименті)</h2>
+            <span class="tovar-size">Об'єм - 300 г.</span>
+            <div class="details">
+                <p><strong>Домашні лимонади — освіжаюча насолода в кожному ковтку. Наші домашні лимонади — це: натуральні інгредієнти — свіжі фрукти, ягоди, м’ята, 
+                    мед або тростинний цукор; живильна свіжість — ідеальний напій для спекотного дня або душевної розмови; без штучних добавок — тільки чистий смак і 
+                    справжнє задоволення.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/drink6.jpg" data-price=" від 40">
+        <img src="img/drink6.jpg" alt="Напої" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Кава (в асортименті)</h2>
+            <span class="tovar-size">Об'єм - від 50 г.</span>
+            <div class="details">
+                <p><strong>Кава — більше, ніж напій. Це емоція, ритуал і ароматна пауза посеред дня. У кожному зерні — історія, у кожному ковтку — тепло і 
+                    натхнення. Скуштуйте, щоб відчути!</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/drink1.jpg" data-price="17">
+        <img src="img/drink1.jpg" alt="Напої" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Чай фруктово-медовий «Манго та маракуя»</h2>
+            <span class="tovar-size">Вага - 50 г.</span>
+            <div class="details">
+                <p><strong>Фруктово-медовий чай «Манго та маракуя» – це смачний та корисний напій, що однаково смакує як холодним, так і гарячим. Влітку напій Асканія освіжить та тонізує, а взимку зігріє своїм теплом і подарує присмак улюблених ягід та фруктів.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/drink2.jpg" data-price="17">
+        <img src="img/drink2.jpg" alt="Напої" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Чай фруктово-медовий «Імбир та лемонграсс»</h2>
+            <span class="tovar-size">Вага - 50 г.</span>
+            <div class="details">
+                <p><strong>Фруктово-медовий чай «Імбир та лемонграсс» – це смачний та корисний напій, що однаково смакує як холодним, так і гарячим. Влітку напій Асканія освіжить та тонізує, а взимку зігріє своїм теплом і подарує присмак улюблених ягід та фруктів.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/drink3.jpg" data-price="17">
+        <img src="img/drink3.jpg" alt="Напої" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Чай фруктово-медовий «Малина та м’ята»</h2>
+            <span class="tovar-size">Вага - 50 г.</span>
+            <div class="details">
+                <p><strong>Смак літа і тепла – фруктово-медовий чай «Малина та м’ята» від Асканія. Максимально натуральний, до складу входять тільки природні компоненти: квітковий мед, малина, чорна смородина, м’ята.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+</section>
+
+
+<div id="product-modal" class="modal2">
+    <div class="modal2-content">
+        <span class="close-button" onclick="closeProductModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" class="modal-image">
+        <p id="modal-price"></p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <ul class="footer-icon">
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-phone"></i>
+                +38(095)445 45 45
+                </a>
+            </li>
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-location-dot"></i>
+                Україна, м.Полтава, вул.Європейська, 54
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=uk_UA" class="icon-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src="desert.js"></script>
+<script src="home2JS.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>

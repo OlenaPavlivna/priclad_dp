@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сhocolate</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" >
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="desert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script
+        type="module"
+        crossorigin
+        src="https://spring-slider.uiinitiative.com/assets/index.8742a0a0.js">
+    </script>
+    <link
+        rel="modulepreload"
+        href="https://spring-slider.uiinitiative.com/assets/vendor.0e76e1a6.js">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Кондитерська крамниця</a>
+         <a class="logo-img" href="index.html"><img src="img/logo.png" alt="logo" style="max-width: 100%; height: auto;" ></a>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="index.html" ><i class="fas fa-shop "></i></a></li>
+            <li><a class="nav-link" href=""id="openModal"><i class="fa-regular fa-envelope"></i></a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Зв'яжіться з нами</h2>
+            <form id="contactForm" action="https://formspree.io/f/xqabpzgo" method="POST">
+            <input type="text" id="fullName" name="fullName" placeholder="Повне ім'я" required>
+            <span class="error-message" id="nameError"></span>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+            <span class="error-message" id="emailError"></span>
+            <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+            <span class="error-message" id="phoneError"></span>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+            <span class="error-message" id="messageError"></span>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Надіслати повідомлення</button>
+            </form>
+             <p id="successMessage" class="hidden"><i class="fas fa-check-circle"></i> Ваше повідомлення надіслано успішно!</p>
+
+       
+    </div>
+</div>
+
+<section class="categories">
+    <div class="category-container">
+        <div class="category-item">
+            <p>ТОРТИ</p>
+        </div>
+        <div class="category-item">
+            <p>ТІСТЕЧКА</p>
+        </div>
+        <div class="category-item">
+            <p>МОРОЗИВО</p>
+        </div>
+        <div class="category-item">
+            <p>ЦУКЕРКИ</p>
+        </div>
+        <div class="category-item">
+            <p>ПЕЧИВО</p>
+        </div>
+        <div class="category-item">
+            <p>НАПОЇ</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="tovar-list">
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cookies4.jpg" data-price="60(за 1 шт.)">
+        <img src="img/cookies4.jpg" alt="Печиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Кейк-попс</h2>
+            <span class="tovar-size">Вага - 30 г.</span>
+            <div class="details">
+                <p><strong>Кейк-попси — це ніжні шматочки бісквіту, з’єднані кремом, вкриті шоколадною глазур’ю та декором. Вони мають вологу, м’яку текстуру, приємно 
+                    тануть у роті, залишаючи делікатний смак шоколаду, ванілі чи ягід — залежно від начинки. Цей десерт поєднує: бісквітну легкість, кремову ніжність,
+                    хрустку шоколадну оболонку, і барвистий, часто трішки хрумкий декор.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cookies5.jpg" data-price="90(за 1 шт.)">
+        <img src="img/cookies5.jpg" alt="Печиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Макаронс</h2>
+            <span class="tovar-size">Вага - 30 г.</span>
+            <div class="details">
+                <p><strong>Макаронс — це ніжне поєднання хрусткої скоринки та м’якої начинки, яке тане в роті, залишаючи вишуканий післясмак. Кожен макарон — 
+                    це гармонія мигдалевого борошна, солодкого крему та тонких ароматів. Смак залежить від начинки, але завжди має:легку хрустку текстуру зовні, 
+                    шовковисту, ніжну середину, вишуканий аромат — ванілі, ягід, цитрусових, фісташки або шоколаду.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cookies6.jpg" data-price="50(за 1 шт.)">
+        <img src="img/cookies6.jpg" alt="Печиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Прянички</h2>
+            <span class="tovar-size">Вага - 40 г.</span>
+            <div class="details">
+                <p><strong>Пряники в глазурі — це ароматне поєднання прянощів та ніжної солодкості, огорнуте тонкою хрусткою глазур’ю. Їхній смак — 
+                    це теплі нотки кориці, гвоздики, імбиру та меду, які створюють справжній атмосферний настрій затишку й дитинства. Глазур додає: легку хрусткість,
+                    приємну солодку нотку, естетичну привабливість.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cookies1.jpg" data-price="30">
+        <img src="img/cookies1.jpg" alt="Печиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Італійське печиво Бісскоті</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Незвичайно смачне та ароматне печиво з величезною кількістю горіхів, кураги та чорносливу​. Смак справжньої італійської випічки в наших біскоті.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cookies2.jpg" data-price="40">
+        <img src="img/cookies2.jpg" alt="Печиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Печиво Шоколадне. Вологий трюфель.</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Шоколадне, злегка вологе всередині з приголомшливим вершковим ароматом печиво. Чорний шоколад, натуральна ваніль, вершкове масло та трохи борошна вищого ґатунку — це історія смаку наших ідеальних печінки з ефектом кракелюру.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cookies3.jpg" data-price="400">
+        <img src="img/cookies3.jpg" alt="Печиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Набір Патріотичних пряників.</h2>
+            <span class="tovar-size">Вага - 300 г.</span>
+            <div class="details">
+                <p><strong>М'які медово-імбирні-пряники зроблені на основі натурального ароматного меду та прянощів. Пряники ручної роботи.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+</section>
+
+
+<div id="product-modal" class="modal2">
+    <div class="modal2-content">
+        <span class="close-button" onclick="closeProductModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" class="modal-image">
+        <p id="modal-price"></p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <ul class="footer-icon">
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-phone"></i>
+                +38(095)445 45 45
+                </a>
+            </li>
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-location-dot"></i>
+                Україна, м.Полтава, вул.Європейська, 54
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=uk_UA" class="icon-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src="desert.js"></script>
+<script src="home2JS.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>

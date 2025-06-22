@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сhocolate</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" >
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="desert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script
+        type="module"
+        crossorigin
+        src="https://spring-slider.uiinitiative.com/assets/index.8742a0a0.js">
+    </script>
+    <link
+        rel="modulepreload"
+        href="https://spring-slider.uiinitiative.com/assets/vendor.0e76e1a6.js">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Кондитерська крамниця</a>
+         <a class="logo-img" href="index.html"><img src="img/logo.png" alt="logo" style="max-width: 100%; height: auto;" ></a>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="index.html" ><i class="fas fa-shop "></i></a></li>
+            <li><a class="nav-link" href=""id="openModal"><i class="fa-regular fa-envelope"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Зв'яжіться з нами</h2>
+            <form id="contactForm" action="https://formspree.io/f/xqabpzgo" method="POST">
+            <input type="text" id="fullName" name="fullName" placeholder="Повне ім'я" required>
+            <span class="error-message" id="nameError"></span>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+            <span class="error-message" id="emailError"></span>
+            <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+            <span class="error-message" id="phoneError"></span>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+            <span class="error-message" id="messageError"></span>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Надіслати повідомлення</button>
+            </form>
+             <p id="successMessage" class="hidden"><i class="fas fa-check-circle"></i> Ваше повідомлення надіслано успішно!</p>
+
+       
+    </div>
+</div>
+
+
+<section class="categories">
+  
+    <div class="category-container">
+        <div class="category-item">
+            <p>ТОРТИ</p>
+        </div>
+        <div class="category-item">
+            <p>ТІСТЕЧКА</p>
+        </div>
+        <div class="category-item">
+            <p>МОРОЗИВО</p>
+        </div>
+        <div class="category-item">
+            <p>ЦУКЕРКИ</p>
+        </div>
+        <div class="category-item">
+            <p>ПЕЧИВО</p>
+        </div>
+        <div class="category-item">
+            <p>НАПОЇ</p>
+        </div>
+    </div>
+</section>
+
+  
+<section class="tovar-list">
+
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/pie1.jpg" data-price="750 (під замовлення)">
+        <img src="img/pie1.jpg" alt="Торт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Торт Наполеон</h2>
+            <span class="tovar-size">Вага - 1,5 кг.</span>
+            <div class="details">
+                <p><strong>Вишукана класика, що поєднує ніжність та насиченість смаку. Кожен шар тонкого, хрумкого листкового тіста просочений легким заварним кремом, що тане в роті. 
+                    Його смак — гармонійне поєднання ніжної солодкості, легкої ванільної нотки та делікатної вершковості. Ідеально пасує до чашечки ароматної кави чи чаю.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+
+    
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/pie2.jpg" data-price="750">
+        <img src="img/pie2.jpg" alt="Торт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Торт Малина-Шоколад</h2>
+            <span class="tovar-size">Вага - 1,5 кг.</span>
+            <div class="details">
+                <p><strong>Насичений, оксамитовий шоколадний бісквіт поєднується з легкою кислинкою свіжої малини, утворюючи неперевершений баланс солодкого й фруктового смаку.
+Шари повітряного шоколадного тіста чергуються з ніжним малиновим мусом та шоколадним ганашем, що надає десерту глибини та вишуканості.</strong></p>
+            </div>
+        </div>
+
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/pie3.jpg" data-price="750">
+        <img src="img/pie3.jpg" alt="Торт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Торт Вишня(бісквіт)</h2>
+            <span class="tovar-size">Вага - 1,5 кг.</span>
+            <div class="details">
+                <p><strong>Ідеальне поєднання легкості, фруктовості та домашнього затишку. Ніжний, повітряний бісквіт дбайливо просякнутий ароматним сиропом і щедро доповнений соковитими вишнями, які дарують приємну кислинку та освіжаючий смак.
+                    (Вишневі бісквіти з додаванням какао, сирно-заварний крем на основі крем-сиру Каліфорнія, свіжа вишня).</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/pie6.jpg" data-price="730">
+        <img src="img/pie6.jpg" alt="Торт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Торт Фруктовий</h2>
+            <span class="tovar-size">Вага - 1,2 кг.</span>
+            <div class="details">
+                <p><strong>Ніжні бісквітні коржі просочені сиропом, з’єднані сметанно-вершковою начинкою з додаванням персику та полуниці. 
+                    Легкий крем на основі вершків або заварний крем (залежно від рецепту) надає тортові м’якості та ніжної текстури, а фруктова нотка додає вишуканості й святковості кожному шматочку.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/pie4.jpg" data-price="600">
+        <img src="img/pie4.jpg" alt="Торт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Торт "День і ніч"</h2>
+            <span class="tovar-size">Вага - 0,8 кг.</span>
+            <div class="details">
+                <p><strong>Це вишукане поєднання темного шоколадного та світлого ванільного бісквіту, які чергуються шарами, створюючи неповторну гармонію смаків і кольорів.
+Кожен шар доповнений ніжним вершковим кремом, який підкреслює контрастність двох смакових світів — насиченого «нічного» шоколаду та легкого, солодкого «денного» ванільного акценту.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/pie5.jpg" data-price="520 (під замовлення)">
+        <img src="img/pie5.jpg" alt="Торт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Торт Літо</h2>
+            <span class="tovar-size">Вага - 0,9 кг.</span>
+            <div class="details">
+                <p><strong>Ніжні бісквітні коржі поєднуються з вишневим, малиновим або абрикосовим прошарком (у різних варіаціях), доповнені вітамінним ягідним мусом 
+                    чи вершковим кремом. У ньому — смак сонячних фруктів, свіжих ягід і прохолоди літнього ранку. Торт має легку текстуру, 
+                    освіжаючий післясмак і яскравий аромат, який навіює асоціації з відпочинком, пікніками та безтурботними днями.
+                    
+                </strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+
+</section>
+<div id="product-modal" class="modal2">
+    <div class="modal2-content">
+        <span class="close-button" onclick="closeProductModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" class="modal-image">
+        <p id="modal-price"></p>
+    </div>
+</div>
+
+    
+
+<footer class="footer">
+    <div class="container">
+        <ul class="footer-icon">
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-phone"></i>
+                +38(095)445 45 45
+                </a>
+            </li>
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-location-dot"></i>
+                Україна, м.Полтава, вул.Європейська, 54
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=uk_UA" class="icon-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+<script src="desert.js"></script>
+<script src="home2JS.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>

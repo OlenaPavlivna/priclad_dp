@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сhocolate</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" >
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="desert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script
+        type="module"
+        crossorigin
+        src="https://spring-slider.uiinitiative.com/assets/index.8742a0a0.js">
+    </script>
+    <link
+        rel="modulepreload"
+        href="https://spring-slider.uiinitiative.com/assets/vendor.0e76e1a6.js">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Кондитерська крамниця</a>
+        <a class="logo-img" href="index.html"><img src="img/logo.png" alt="logo" style="max-width: 100%; height: auto;" ></a>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="index.html" ><i class="fas fa-shop "></i></a></li>
+            <li><a class="nav-link" href=""id="openModal"><i class="fa-regular fa-envelope"></i></a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Зв'яжіться з нами</h2>
+            <form id="contactForm" action="https://formspree.io/f/xqabpzgo" method="POST">
+            <input type="text" id="fullName" name="fullName" placeholder="Повне ім'я" required>
+            <span class="error-message" id="nameError"></span>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+            <span class="error-message" id="emailError"></span>
+            <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+            <span class="error-message" id="phoneError"></span>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+            <span class="error-message" id="messageError"></span>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Надіслати повідомлення</button>
+            </form>
+             <p id="successMessage" class="hidden"><i class="fas fa-check-circle"></i> Ваше повідомлення надіслано успішно!</p>
+
+       
+    </div>
+</div>
+
+<section class="categories">
+    <div class="category-container">
+        <div class="category-item">
+            <p>ТОРТИ</p>
+        </div>
+        <div class="category-item">
+            <p>ТІСТЕЧКА</p>
+        </div>
+        <div class="category-item">
+            <p>МОРОЗИВО</p>
+        </div>
+        <div class="category-item">
+            <p>ЦУКЕРКИ</p>
+        </div>
+        <div class="category-item">
+            <p>ПЕЧИВО</p>
+        </div>
+        <div class="category-item">
+            <p>НАПОЇ</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="tovar-list">
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/candy4.jpg" data-price="420 (за 1 кг.)">
+        <img src="img/candy4.jpg" alt="Цукерки Кокосові" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Цукерки Кокосові</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Ніжна кокосова стружка, щедро поєднана з делікатним кремом, створює танучу серединку. Легкий хрумкий 
+                    шар зверху доповнює текстуру, а вишукане шоколадне покриття робить смак цукерки збалансованим і гармонійним. Кожна цукерка — 
+                    це мікс солодкого, ніжного та тропічного. Ідеально смакує з чаєм, кавою або як солодкий акцент 
+                    до святкового столу.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/candy5.jpg" data-price="570 (за 1 кг.)">
+        <img src="img/candy5.jpg" alt="Цукерки Грільяжні" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Цукерки Грильяжні</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>У серці кожної цукерки — карамелізовані горішки (арахіс або мигдаль), об’єднані з тягучою карамеллю або легкою нугатною основою. Хрумкий 
+                    грильяжний шар дарує приємне відчуття хрусту, а шоколадна оболонка — завершальний штрих смакового задоволення. Смак — насичений, 
+                    горіхово-карамельний, з легкими нотками смаженого цукру та шоколаду.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/candy6.jpg" data-price="500 (за 1 кг.)">
+        <img src="img/candy6.jpg" alt="Цукерки Асорті" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Цукерки Асорті</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Цукерки «Асорті» — це різноманіття смаків, справжня насолода для тих, хто цінує вибір. У наборі гармонійно поєднуються 
+                    горіхові, фруктові, шоколадні, вершкові та карамельні цукерки — кожна з унікальним характером та ароматом. Ви можете спробувати: ніжні трюфельні 
+                    кульки з какао-пудрою, горіхово-шоколадні праліне, вершкові цукерки з карамельною начинкою.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/candy1.jpg" data-price="570">
+        <img src="img/candy1.jpg" alt="Цукерки" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Цукерки "Квіти України"</h2>
+            <span class="tovar-size">Вага - 156 г.</span>
+            <div class="details">
+                <p><strong>Колекція цукерок створена для подарунків. Кожна цукерка відображає розмаїття кольорів та ароматів українських квітів навесні.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/candy2.jpg" data-price="690">
+        <img src="img/candy2.jpg" alt="Цукерки" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Цукерки "Вечорниці"</h2>
+            <span class="tovar-size">Вага - 210 г.</span>
+            <div class="details">
+                <p><strong>Смак незабутніх українських вечорів, сповнених затишку, тепла й душевних розмов (вишня-кориця, бергамот-темний шоколад, фундук-молочний 
+                    шоколад, манго-маракуя лимон-зелений перець).</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/candy3.jpg" data-price="590">
+        <img src="img/candy3.jpg" alt="Цукерки" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Шоколадне серце</h2>
+            <span class="tovar-size">Вага - 200 г.</span>
+            <div class="details">
+                <p><strong>Вся ваша любов у вишуканих валентинках від Candy Buffet ♥️. Серце виготовлено з чорного шоколаду. (шоколадна нуга, фундук-кокос, мигдаль-малина.)</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+</section>
+
+
+<div id="product-modal" class="modal2">
+    <div class="modal2-content">
+        <span class="close-button" onclick="closeProductModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" class="modal-image">
+        <p id="modal-price"></p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <ul class="footer-icon">
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-phone"></i>
+                +38(095)445 45 45
+                </a>
+            </li>
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-location-dot"></i>
+                Україна, м.Полтава, вул.Європейська, 54
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=uk_UA" class="icon-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src="desert.js"></script>
+<script src="home2JS.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>

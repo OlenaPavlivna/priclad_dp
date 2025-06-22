@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сhocolate</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" >
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="desert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script
+        type="module"
+        crossorigin
+        src="https://spring-slider.uiinitiative.com/assets/index.8742a0a0.js">
+    </script>
+    <link
+        rel="modulepreload"
+        href="https://spring-slider.uiinitiative.com/assets/vendor.0e76e1a6.js">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Кондитерська крамниця</a>
+         <a class="logo-img" href="index.html"><img src="img/logo.png" alt="logo" style="max-width: 100%; height: auto;" ></a>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="index.html" ><i class="fas fa-shop "></i></a></li>
+            <li><a class="nav-link" href=""id="openModal"><i class="fa-regular fa-envelope"></i></a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Зв'яжіться з нами</h2>
+            <form id="contactForm" action="https://formspree.io/f/xqabpzgo" method="POST">
+            <input type="text" id="fullName" name="fullName" placeholder="Повне ім'я" required>
+            <span class="error-message" id="nameError"></span>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+            <span class="error-message" id="emailError"></span>
+            <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+            <span class="error-message" id="phoneError"></span>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+            <span class="error-message" id="messageError"></span>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Надіслати повідомлення</button>
+            </form>
+             <p id="successMessage" class="hidden"><i class="fas fa-check-circle"></i> Ваше повідомлення надіслано успішно!</p>
+
+       
+    </div>
+</div>
+
+<section class="categories">
+    <div class="category-container">
+        <div class="category-item">
+            <p>ТОРТИ</p>
+        </div>
+        <div class="category-item">
+            <p>ТІСТЕЧКА</p>
+        </div>
+        <div class="category-item">
+            <p>МОРОЗИВО</p>
+        </div>
+        <div class="category-item">
+            <p>ЦУКЕРКИ</p>
+        </div>
+        <div class="category-item">
+            <p>ПЕЧИВО</p>
+        </div>
+        <div class="category-item">
+            <p>НАПОЇ</p>
+        </div>
+    </div>
+</section>
+
+<section class="tovar-list">
+
+<section class="tovar-list">
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cake1.jpg" data-price="95">
+        <img src="img/cake1.jpg" alt="Десерт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Десерт Вишня-шоколад</h2>
+            <span class="tovar-size">Вага - 105 г.</span>
+            <div class="details">
+                <p><strong>Вишукане поєднання насиченого шоколаду та соковитої вишні. 
+                    Гармонія легкої кислинки ягід і глибокого смаку темного шоколаду створює справжній вибух емоцій на піднебінні. М'який бісквіт або 
+                    кремова основа, просочена вишневим соусом або конфі, дарує ніжність, а шоколадна глазур або мус надає розкішної глибини смаку.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cake2.jpg" data-price="95">
+        <img src="img/cake2.jpg" alt="Десерт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Десерт Малиновий</h2>
+            <span class="tovar-size">Вага - 90 г.</span>
+            <div class="details">
+                <p><strong>Справжня свіжість літа у кожній ложці. Соковита, трохи кислувата малина надає десерту яскравої ягідної нотки, яка чудово поєднується з 
+                    ніжним кремом, мусом або легким бісквітом. Цей десерт легкий, освіжаючий та ароматний, залишає приємний післясмак і пробуджує апетит. 
+                    Ідеально підходить для тих, хто цінує фруктову натуральність та витончену кислинку.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cake3.jpg" data-price="95">
+        <img src="img/cake3.jpg" alt="Десерт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Десерт Манго-полуниця</h2>
+            <span class="tovar-size">Вага - 90 г.</span>
+            <div class="details">
+                <p><strong>Сонячне поєднання екзотики та літа, яке дарує справжню насолоду з першої ложки. Солодке, соковите манго в тандемі з ніжною ароматною 
+                    полуницею створюють гармонійний баланс смаків — від легкого тропічного меду до яскравої ягідної свіжості. Цей десерт вишуканий, легкий і 
+                    надзвичайно освіжаючий, він пробуджує відчуття радості та гармонії.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cake4.jpg" data-price="130">
+        <img src="img/cake4.jpg" alt="Десерт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Десерт Панакота</h2>
+            <span class="tovar-size">Вага - 120 г.</span>
+            <div class="details">
+                <p><strong>Втілення італійської елегантності в десерті. Ніжна, шовковиста текстура наче тане в роті, залишаючи тонкий вершковий післясмак, 
+                    доповнений натяком ванілі чи фруктового соусу (полуничного, малинового, карамельного).Цей десерт вражає делікатністю та 
+                    легкістю та дарує витончене задоволення. Він ідеально підходить для завершення трапези або як розкішна 
+                    солодка пауза посеред дня.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cake5.jpg" data-price="110">
+        <img src="img/cake5.jpg" alt="Десерт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Десерт Тірамісу</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Справжня класика італійських десертів, що поєднує в собі ніжність вершкового крему маскарпоне та аромат свіжозвареної кави. 
+                    Шари повітряного бісквіту савоярді, просочені еспресо з нотками лікеру, створюють багатогранний і вишуканий смак. Кожна ложка — це гармонія 
+                    солодкого, гіркуватого й вершкового, що тане на язику, залишаючи легкий кавовий післясмак з натяком на какао.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/cake6.jpg" data-price="120">
+        <img src="img/cake6.jpg" alt="Десерт" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Десерт Чізкейк</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Поєднання ніжного вершкового сиру, що тане в роті, з легким солодким смаком ванілі або фруктовим акцентом, залежно від начинки. 
+                    Основа з крихкого пісочного печива або тонкого бісквіта додає приємної текстури й контрасту ніжному крему. Цей десерт має вишукану вершкову 
+                    насолоду, збалансовану помірною солодкістю та оксамитовою консистенцією, яка робить кожен шматочок справжнім задоволенням..</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+</section>
+
+
+<div id="product-modal" class="modal2">
+    <div class="modal2-content">
+        <span class="close-button" onclick="closeProductModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" class="modal-image">
+        <p id="modal-price"></p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <ul class="footer-icon">
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-phone"></i>
+                +38(095)445 45 45
+                </a>
+            </li>
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-location-dot"></i>
+                Україна, м.Полтава, вул.Європейська, 54
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=uk_UA" class="icon-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src="desert.js"></script>
+<script src="home2JS.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сhocolate</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" >
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="desert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script
+        type="module"
+        crossorigin
+        src="https://spring-slider.uiinitiative.com/assets/index.8742a0a0.js">
+    </script>
+    <link
+        rel="modulepreload"
+        href="https://spring-slider.uiinitiative.com/assets/vendor.0e76e1a6.js">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Кондитерська крамниця</a>
+         <a class="logo-img" href="index.html"><img src="img/logo.png" alt="logo" style="max-width: 100%; height: auto;" ></a>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="index.html" ><i class="fas fa-shop "></i></a></li>
+            <li><a class="nav-link" href=""id="openModal"><i class="fa-regular fa-envelope"></i></a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Зв'яжіться з нами</h2>
+            <form id="contactForm" action="https://formspree.io/f/xqabpzgo" method="POST">
+            <input type="text" id="fullName" name="fullName" placeholder="Повне ім'я" required>
+            <span class="error-message" id="nameError"></span>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+            <span class="error-message" id="emailError"></span>
+            <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+            <span class="error-message" id="phoneError"></span>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+            <span class="error-message" id="messageError"></span>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Надіслати повідомлення</button>
+            </form>
+             <p id="successMessage" class="hidden"><i class="fas fa-check-circle"></i> Ваше повідомлення надіслано успішно!</p>
+
+       
+    </div>
+</div>
+
+<section class="categories">
+    <div class="category-container">
+        <div class="category-item">
+            <p>ТОРТИ</p>
+        </div>
+        <div class="category-item">
+            <p>ТІСТЕЧКА</p>
+        </div>
+        <div class="category-item">
+            <p>МОРОЗИВО</p>
+        </div>
+        <div class="category-item">
+            <p>ЦУКЕРКИ</p>
+        </div>
+        <div class="category-item">
+            <p>ПЕЧИВО</p>
+        </div>
+        <div class="category-item">
+            <p>НАПОЇ</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="tovar-list">
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/ice1.jpg" data-price="125">
+        <img src="img/ice1.jpg" alt="Морозиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Морозиво Фісташкове</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Ніжна, кремова текстура поєднується з тонким горіховим ароматом і легким солодкуватим післясмакоме. Справжні фісташки дарують морозиву 
+                    делікатний, благородний смак з легкою терпкістю, що вигідно ирізняє його серед інших десертів. Ідеально збалансоване, не надто солодке, воно 
+                    підходить як для самостійного задоволення, так і в поєднанні з кавою, фруктами чи шоколадом.​.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/ice2.jpg" data-price="140">
+        <img src="img/ice2.jpg" alt="Морозиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Морозиво "Блактний янгол"</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Це морозиво — справжня екзотична феєрія смаку! Воно зачаровує не лише своїм яскравим блакитним кольором, а й вишуканим, цитрусовим 
+                    ароматом лікеру Blue Curaçao. Смак — свіжий, тропічний, з ніжною кислинкою 
+                    та легким карамельно-апельсиновим акцентом, що гармонійно поєднується з вершковою ніжністю морозива. Це прохолодне задоволення з легким натяком 
+                    на екзотику.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+    <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/ice3.jpg" data-price="115">
+        <img src="img/ice3.jpg" alt="Морозиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Морозиво "Тоффі-Карамель"</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Це втілення ніжності й солодкої спокуси. Морозиво поєднує ніжну кремову основу з вкрапленнями м’якої карамелі та 
+                    нотками тягучого ірису (тоффі). Смак балансує між молочною ніжністю та глибоким карамельним ароматом, створюючи теплий післясмак, що довго 
+                    залишається на язику. У кожній ложці — гармонія вершкової легкості й карамельної насолоди.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/ice4.jpg" data-price="150">
+        <img src="img/ice4.jpg" alt="Морозиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Смаженем морозиво </h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Смажене морозиво — це контрастна магія смаку, яка дивує з першої ложки. Хрумка, тепла скоринка зовні приховує холодну, ніжну 
+                    серединку, що буквально тане в роті. Смак поєднує в собі солодкість вершків, легкий карамелізований післясмак та приємну текстуру. 
+                    Подається з медом, фруктовим соусом чи шоколадом — і кожен додаток додає нових нот до цієї екзотичної 
+                    гастрономічної пригоди.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/ice5.jpg" data-price="120">
+        <img src="img/ice5.jpg" alt="Морозиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Морозиво "Полуничний рай"</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Вибух свіжості та літньої солодкості. Його ніжна кремова текстура поєднується з яскравим смаком стиглої полуниці, який 
+                    одразу викликає приємні асоціації з сонцем, ягодами та безтурботністю. Цей десерт приємно освіжає, залишаючи фруктовий післясмак із 
+                    легкою кислинкою, що врівноважує солодкість. Ідеально підходить як ласощі у спекотний день.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+        <div class="tovar-card" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" data-image="img/ice6.jpg" data-price="105">
+        <img src="img/ice6.jpg" alt="Морозиво" class="tovar-image">
+        <div class="tovar-info">
+            <h2 class="tovar-title">Морозиво Ванільне</h2>
+            <span class="tovar-size">Вага - 100 г.</span>
+            <div class="details">
+                <p><strong>Ванільне морозиво — це класика, перевірена часом. Його смак — ніжний, солодкий і витончений, з м’яким ароматом натуральної ванілі, 
+                    що огортає приємним теплом навіть у холодному десерті. Кремова текстура морозива буквально тане в роті, залишаючи делікатний післясмак, 
+                    який не перевантажує, а навпаки — освіжає і радує.</strong></p>
+            </div>
+        </div>
+        <button class="view-button" onclick="showProductDetails(this)">Переглянути</button>
+    </div>
+</section>
+
+
+<div id="product-modal" class="modal2">
+    <div class="modal2-content">
+        <span class="close-button" onclick="closeProductModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" class="modal-image">
+        <p id="modal-price"></p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <ul class="footer-icon">
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-phone"></i>
+                +38(095)445 45 45
+                </a>
+            </li>
+            <li>
+                <a class="icon-1">
+                <i class="fa-solid fa-location-dot"></i>
+                Україна, м.Полтава, вул.Європейська, 54
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=uk_UA" class="icon-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src="desert.js"></script>
+<script src="home2JS.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>
